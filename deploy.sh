@@ -21,14 +21,10 @@ fi
 if grep -qE '\bindex.js' <<< "$FILES_CHANGED"; then
     yarn version --new-version "$DATE"
     git add index.js
-    git commit -n --amend
+    git commit --no-edit --amend
 
     git tag -a $DATE -m "$DATE"
 fi
-
-exit
-
-git commit -m "Build $VERSION"
 
 git push --tags
 git push --all
