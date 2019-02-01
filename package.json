@@ -1,0 +1,20 @@
+{
+  "name": "wwf-animals",
+  "version": "1.0.0",
+  "description": "An Array of Endangered Animals",
+  "main": "index.js",
+  "scripts": {
+    "test": "node -e 'require(\".\")'"
+  },
+  "author": "Bas Hemmes <pitchblackcat@gmail.com>",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PitchBlackCat/wwf-animals.git"
+
+  },
+  "bugs": {
+    "url": "https://github.com/PitchBlackCat/wwf-animals/issues"
+  },
+  "homepage": "https://github.com/PitchBlackCat/wwf-animals#readme"
+}
