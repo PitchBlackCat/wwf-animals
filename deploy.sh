@@ -19,7 +19,7 @@ if [ -z "$FILES_CHANGED" ]; then
 fi
 
 if grep -qE '\bindex.js' <<< "$FILES_CHANGED"; then
-    npm version $DATE
+    npm version "$DATE"
     git add index.js
     git commit -n --amend
 
