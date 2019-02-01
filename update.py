@@ -27,9 +27,9 @@ def send_spiders(url):
             continue
 
         animals.append({
-            'name': cells[0].text,
-            'scientific': cells[1].text,
-            'status': cells[2].text,
+            'name': cells[0].text.strip(),
+            'scientific': cells[1].text.strip(),
+            'status': cells[2].text.strip(),
         })
 
     return None is not soup.select_one('#content a[rel="next"]')
@@ -40,13 +40,14 @@ while has_next_page and page < 10:
     page = page + 1
     has_next_page = send_spiders(url + str(page))
 
-f = open("src/index.js", "w+")
-writeLine(f, 'module.exports = [')
+f = open("index.js", "w+")
+writeLine(f, 'let wwf_animals = [')
 
 for animal in animals:
-    line = "{name: '%s', scientific: '%s', status: '%s'}," % (animal['name'], animal['scientific'], animal['status'])
+    line = '{name: "%s", scientific: "%s", status: "%s"},' % (animal['name'], animal['scientific'], animal['status'])
     writeLine(f, line)
     print(line)
 
 writeLine(f, '];')
+writeLine(f, 'module.exports = [wwf_animals];')
 f.close()

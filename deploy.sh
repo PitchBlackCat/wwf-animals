@@ -3,6 +3,10 @@
 # exit if any command fails
 set -e
 
+DATE=`date +%Y.%m.%d`
+git add .
+git commit -m "Update @ $DATE"
+
 LATEST_TAG=$(git describe --tags --abbrev=0)
 CURRENT_REVISION=$(git describe)
 NUMBER_FILES_CHANGED=$(git diff --name-only HEAD $LATEST_TAG | wc -l)
@@ -10,34 +14,22 @@ FILES_CHANGED=$(git diff --name-only HEAD $LATEST_TAG)
 
 if [ -z "$FILES_CHANGED" ]; then
   echo Nothing changed since $LATEST_TAG
+  echo done.
+  exit
 fi
 
-if grep -qE '\bcms/' <<< "$FILES_CHANGED"; then
-    echo Building CMS
-    cd cms
-    yarn build
-    cd ..
-    git add cms/dist
+if grep -qE '\bindex.js' <<< "$FILES_CHANGED"; then
+    npm version $DATE
+    git add index.js
+    git commit -n --amend
+
+    git tag -a $DATE -m "$DATE"
 fi
 
-if grep -qE '\bpwa/' <<< "$FILES_CHANGED"; then
-    echo Building PWA
-    cd pwa
-    yarn build
-    cd ..
-    git add pwa/dist
-fi
-
-cat version | perl -ne 'chomp; print join(".", splice(@{[split/\./,$_]}, 0, -1), map {++$_} pop @{[split/\./,$_]}), "\n";' > version.tmp
-mv version.tmp version
-
-VERSION=v$(cat version)-dev
-
-git add version
-VERSION=v$(cat version)-dev
+exit
 
 git commit -m "Build $VERSION"
-git tag -a $VERSION -m "$VERSION"
+
 git push --tags
 git push --all
 
