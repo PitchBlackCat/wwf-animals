@@ -14,10 +14,20 @@ npm install wwf-animals
 ## Usage
 
 ```typescript
-import * as wwf_animals from "wwf-animals";
+import * as endangered_animals from "wwf-animals";
 
-console.log(wwf_animals);
-console.log(wwf_animals.map(a => a.name));
+console.log(endangered_animals);
+```
+
+## Example Output
+
+```typescript
+[
+    {name: "African Elephant", scientific: "Loxodonta africana", status: "Vulnerable"},
+    {name: "Bengal Tiger", scientific: "Panthera tigris tigris", status: "Endangered"},
+    {name: "Orangutan", scientific: "Pongo abelii, Pongo pygmaeus", status: "Critically Endangered"},
+    // ...
+]
 ```
 
 ## Project maintenance
