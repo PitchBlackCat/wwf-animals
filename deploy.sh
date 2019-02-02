@@ -19,7 +19,7 @@ if [ -z "$FILES_CHANGED" ]; then
 fi
 
 if grep -qE '\bindex.js' <<< "$FILES_CHANGED"; then
-    yarn version --new-version "$DATE"
+    yarn version --new-version $DATE --no-git-tag-version
     git add index.js
     git commit --no-edit --amend
 
