@@ -2,9 +2,6 @@
 
 It's an array of endangered species as listed by [worldwildlife.org](https://www.worldwildlife.org/species/directory)
 
-I combine it with [rgbkrk/adjectives](https://github.com/rgbkrk/adjectives) to create a near infinite list of random names.
-
-
 ## Installation
 
 ```
@@ -18,6 +15,8 @@ import * as endangered_animals from "wwf-animals";
 
 console.log(endangered_animals);
 ```
+
+I use it in conjunction with [rgbkrk/adjectives](https://github.com/rgbkrk/adjectives) to create a near infinite list of random names.
 
 ## Example Output
 
