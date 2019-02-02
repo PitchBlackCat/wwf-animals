@@ -1,6 +1,6 @@
 {
   "name": "wwf-animals",
-  "version": "2019.02.02.2",
+  "version": "2019.02.02.3",
   "description": "An Array of Endangered Animals",
   "main": "index.js",
   "scripts": {
