@@ -28,6 +28,8 @@ if grep -qE '\bindex.js' <<< "$FILES_CHANGED"; then
     git push --all
 
     npm publish
+else
+    git commit --amend -m "Updated project files"
 fi
 
 git lg -10
