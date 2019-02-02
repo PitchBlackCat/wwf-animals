@@ -1,0 +1,104 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Users\\PitchBlackCat\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@3.8.5
+3 info using node@v8.11.1
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: 'E:\\www\\awesome\\wwf-animals',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory C:\Users\PitchBlackCat\AppData\Roaming\npm-cache\wwf-animals\2019.2.0-2.2\package.tgz not in flight; packing
+9 verbose correctMkdir C:\Users\PitchBlackCat\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+10 info lifecycle wwf-animals@2019.2.0-2.2~prepublish: wwf-animals@2019.2.0-2.2
+11 silly lifecycle wwf-animals@2019.2.0-2.2~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ 'C:\\Users\\PitchBlackCat\\AppData\\Roaming\\npm-cache\\wwf-animals\\2019.2.0-2.2\\package.tgz',
+12 verbose tar pack   'E:\\www\\awesome\\wwf-animals' ]
+13 verbose tarball C:\Users\PitchBlackCat\AppData\Roaming\npm-cache\wwf-animals\2019.2.0-2.2\package.tgz
+14 verbose folder E:\www\awesome\wwf-animals
+15 verbose addLocalTarball adding from inside cache C:\Users\PitchBlackCat\AppData\Roaming\npm-cache\wwf-animals\2019.2.0-2.2\package.tgz
+16 verbose correctMkdir C:\Users\PitchBlackCat\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+17 silly cache afterAdd wwf-animals@2019.2.0-2.2
+18 verbose afterAdd C:\Users\PitchBlackCat\AppData\Roaming\npm-cache\wwf-animals\2019.2.0-2.2\package\package.json not in flight; writing
+19 verbose correctMkdir C:\Users\PitchBlackCat\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+20 verbose afterAdd C:\Users\PitchBlackCat\AppData\Roaming\npm-cache\wwf-animals\2019.2.0-2.2\package\package.json written
+21 silly publish { name: 'wwf-animals',
+21 silly publish   version: '2019.2.0-2.2',
+21 silly publish   description: 'An Array of Endangered Animals',
+21 silly publish   main: 'index.js',
+21 silly publish   scripts: { test: 'node -e \'require(".")\'' },
+21 silly publish   author: { name: 'Bas Hemmes', email: 'pitchblackcat@gmail.com' },
+21 silly publish   license: 'Apache-2.0',
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/PitchBlackCat/wwf-animals.git' },
+21 silly publish   bugs: { url: 'https://github.com/PitchBlackCat/wwf-animals/issues' },
+21 silly publish   homepage: 'https://github.com/PitchBlackCat/wwf-animals#readme',
+21 silly publish   readme: '# wwf-animals\r\n\r\nIt\'s an array of endangered species as listed by [worldwildlife.org](https://www.worldwildlife.org/species/directory)\r\n\r\nI combine it with [rgbkrk/adjectives](https://github.com/rgbkrk/adjectives) to create a near infinite list of random names.\r\n\r\n\r\n## Installation\r\n\r\n```\r\nnpm install wwf-animals\r\n```\r\n\r\n## Usage\r\n\r\n```typescript\r\nimport * as wwf_animals from "wwf-animals";\r\n\r\nconsole.log(animals);\r\nconsole.log(animals.map(a => a.name));\r\n```\r\n\r\n## Project maintenance\r\nRunning `py update.py` will update `index.js` with a fresh list of endangered animals.\r\nRunning `./deploy.sh` will commit, push and publish',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '60ec452a14d9b60494fdd9dfe45967b01f53abcd',
+21 silly publish   _id: 'wwf-animals@2019.2.0-2.2',
+21 silly publish   _shasum: '5c2cf69c15f7abcf9a2b5ed094db996c9ad819ef',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name wwf-animals
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'wwf-animals',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   name: 'wwf-animals',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/wwf-animals
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading C:\Users\PitchBlackCat\AppData\Roaming\npm-cache\wwf-animals\2019.2.0-2.2\package.tgz
+30 verbose request uri https://registry.npmjs.org/wwf-animals
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 01:30:00
+33 verbose request using bearer token for auth
+34 verbose request id 627cc2e317c37700
+35 http request PUT https://registry.npmjs.org/wwf-animals
+36 http 403 https://registry.npmjs.org/wwf-animals
+37 verbose headers { date: 'Sat, 02 Feb 2019 00:30:06 GMT',
+37 verbose headers   'content-type': 'application/json',
+37 verbose headers   'transfer-encoding': 'chunked',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'set-cookie':
+37 verbose headers    [ '__cfduid=d76280d70d14177039c4a1b0cc86f1d761549067403; expires=Sun, 02-Feb-20 00:30:03 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+37 verbose headers   'cf-ray': '4a288c05da4c9c1d-AMS',
+37 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+37 verbose headers   vary: 'Accept-Encoding',
+37 verbose headers   server: 'cloudflare',
+37 verbose headers   'content-encoding': 'gzip' }
+38 verbose request invalidating C:\Users\PitchBlackCat\AppData\Roaming\npm-cache\registry.npmjs.org\wwf-animals on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: You cannot publish over the previously published versions: 2019.2.0-2.2. : wwf-animals
+40 verbose stack     at makeError (C:\Users\PitchBlackCat\AppData\Roaming\npm\node_modules\npm\node_modules\npm-registry-client\lib\request.js:264:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (C:\Users\PitchBlackCat\AppData\Roaming\npm\node_modules\npm\node_modules\npm-registry-client\lib\request.js:252:14)
+40 verbose stack     at C:\Users\PitchBlackCat\AppData\Roaming\npm\node_modules\npm\node_modules\npm-registry-client\lib\request.js:178:7
+40 verbose stack     at Gunzip.onEnd (zlib.js:131:5)
+40 verbose stack     at emitNone (events.js:111:20)
+40 verbose stack     at Gunzip.emit (events.js:208:7)
+40 verbose stack     at endReadableNT (_stream_readable.js:1064:12)
+40 verbose stack     at _combinedTickCallback (internal/process/next_tick.js:138:11)
+40 verbose stack     at process._tickCallback (internal/process/next_tick.js:180:9)
+41 verbose statusCode 403
+42 verbose pkgid wwf-animals
+43 verbose cwd E:\www\awesome\wwf-animals
+44 error Windows_NT 10.0.17134
+45 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\PitchBlackCat\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+46 error node v8.11.1
+47 error npm  v3.8.5
+48 error code E403
+49 error You cannot publish over the previously published versions: 2019.2.0-2.2. : wwf-animals
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
