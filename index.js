@@ -100,4 +100,4 @@ let wwf_animals = [
 {name: "Yangtze Finless Porpoise", scientific: "Neophocaena asiaeorientalis ssp. asiaeorientalis", status: "Critically Endangered"},
 {name: "Yellowfin Tuna", scientific: "Thunnus albacares", status: "Near Threatened"},
 ];
-module.exports = [wwf_animals];
+module.exports = wwf_animals;

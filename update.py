@@ -49,5 +49,5 @@ for animal in animals:
     print(line)
 
 writeLine(f, '];')
-writeLine(f, 'module.exports = [wwf_animals];')
+writeLine(f, 'module.exports = wwf_animals;')
 f.close()
