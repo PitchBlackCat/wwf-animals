@@ -16,8 +16,8 @@ npm install wwf-animals
 ```typescript
 import * as wwf_animals from "wwf-animals";
 
-console.log(animals);
-console.log(animals.map(a => a.name));
+console.log(wwf_animals);
+console.log(wwf_animals.map(a => a.name));
 ```
 
 ## Project maintenance
