@@ -24,10 +24,11 @@ if grep -qE '\bindex.js' <<< "$FILES_CHANGED"; then
     git commit --no-edit --amend
 
     git tag -a $DATE -m "$DATE"
-fi
+    git push --tags
+    git push --all
 
-git push --tags
-git push --all
+    npm publish
+fi
 
 git lg -10
 
