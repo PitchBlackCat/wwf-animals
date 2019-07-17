@@ -15,7 +15,7 @@ let wwf_animals = [
 {name: "Black Spider Monkey", scientific: "Ateles paniscus", status: "Vulnerable"},
 {name: "Black-footed Ferret", scientific: "Mustela nigripes", status: "Endangered"},
 {name: "Blue Whale", scientific: "Balaenoptera musculus", status: "Endangered"},
-{name: "Bluefin Tuna", scientific: "Thunnus spp", status: "Endangered"},
+{name: "Bluefin Tuna", scientific: "Thunnus Thynnus", status: "Endangered"},
 {name: "Bonobo", scientific: "Pan paniscus", status: "Endangered"},
 {name: "Bornean Orangutan", scientific: "Pongo pygmaeus", status: "Critically Endangered"},
 {name: "Borneo Pygmy Elephant", scientific: "Elephas maximus borneensis", status: "Endangered"},
