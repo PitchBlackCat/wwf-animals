@@ -18,7 +18,7 @@ def getHtml(url):
 
 def send_spiders(url):
     content = getHtml(url)
-    soup = BeautifulSoup(content, features="html5lib")
+    soup = BeautifulSoup(content, features="html.parser")
 
     for row in soup.select('#content tr'):
         cells = row.select('td')
@@ -45,7 +45,7 @@ writeLine(f, 'let wwf_animals = [')
 
 for animal in animals:
     line = '{name: "%s", scientific: "%s", status: "%s"},' % (animal['name'], animal['scientific'], animal['status'])
-    writeLine(f, line)
+    writeLine(f, line.encode('utf-8').strip())
     print(line)
 
 writeLine(f, '];')
