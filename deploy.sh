@@ -3,7 +3,7 @@
 # exit if any command fails
 set -e
 
-DATE=`date +%Y.%m.%d.1`
+DATE=`date +%Y.%m.%d`
 git add .
 git commit -m "Update @ $DATE"
 
