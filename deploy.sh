@@ -3,7 +3,7 @@
 # exit if any command fails
 set -e
 
-DATE=`date +%Y.%m.%d`
+DATE=`date +%Y.%m.%d.1`
 git add .
 git commit -m "Update @ $DATE"
 
@@ -21,6 +21,7 @@ fi
 if grep -qE '\bindex.js' <<< "$FILES_CHANGED"; then
     yarn version --new-version $DATE --no-git-tag-version
     git add index.js
+    git add package.json
     git commit --no-edit --amend
 
     git tag -a $DATE -m "$DATE"
