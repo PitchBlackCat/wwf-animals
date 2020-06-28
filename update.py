@@ -45,7 +45,7 @@ writeLine(f, 'let wwf_animals = [')
 
 for animal in animals:
     line = '{name: "%s", scientific: "%s", status: "%s"},' % (animal['name'], animal['scientific'], animal['status'])
-    line = line.encode('utf-8').strip()
+    line = line.strip()
     writeLine(f, line)
     print(line)
 
